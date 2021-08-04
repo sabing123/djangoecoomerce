@@ -1,0 +1,58 @@
+{% extends 'shop/basic.html' %}
+
+{% block css %}
+
+.col-md-3
+{
+display: inline-block;
+margin-left: -4px;
+text-align:justify;
+}
+
+.col-md-3 img
+{
+width:170px;
+height:200px;
+margin-left:20%;
+margin-top:5%;
+}
+
+.carousel-indicators li {
+    background-color: blue;
+}
+.carousel-indicators {
+    bottom: -10%;
+}
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon{
+background-color: blue;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+top: auto;
+bottom: auto;
+padding-top:222px;
+}
+
+body .no-padding{
+padding-left:0,
+padding-right:0
+}
+{%endblock%}
+
+
+{% block title %} Shopping Project {%endblock%}
+
+{% block body %}
+
+{% include "shop/include/carousel.html" %}
+
+
+{%endblock%}
+
+
+
+
+

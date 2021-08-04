@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+
+</head>
+<body>
+<!--    navigation bar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/shop">My awesome Cart</a>
+    <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/shop"
+                >Home <span class="sr-only">(current)</span></a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/shop/about">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/shop/tracker">Tracker</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/shop/contact">Contact Us</a>
+            </li>
+            <button
+                    class="btn btn-danger mx-3"
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#myModal"
+                    id="wishlist">
+                Wish List <span id="list">0</span>
+            </button>
+        </ul>
+
+        <button
+                class="btn btn-danger mx-3"
+                onclick="clearCart()"
+                id="clearCart">
+            Clear Cart
+        </button>
+
+        <form method="get" action="/shop/search/" class="form-inline my-2 my-lg-0">
+            <input
+                    class="form-control mr-sm-2"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                    name="search"
+                    id="search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                Search
+            </button>
+        </form>
+
+        <button
+                type="button"
+                class="btn btn-secondary mx-2 position-relative"
+                id="popupcart"
+                data-bs-container="body"
+                data-bs-toggle="popover"
+                data-placement="bottom"
+                data-html="true"
+                data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            <span
+                    class="
+              position-absolute
+              top-0
+              start-100
+              translate-middle
+              rounded-pill
+              badge
+              text-dark
+              bg-light
+            "
+            >
+            <span id="cart">0</span>
+          </span>
+        </button>
+    </div>
+</nav>
+<!--    end navigation-->
+
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">My Awesome Cart - Wish List</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        </div>
+        <div class="modal-body" id="myInput" >
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" id="clearList" onclick="clearList()">Clear Wish List</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
