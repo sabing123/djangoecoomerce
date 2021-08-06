@@ -29,6 +29,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Application definition
@@ -131,6 +134,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
-
-django_heroku.settings(locals())
