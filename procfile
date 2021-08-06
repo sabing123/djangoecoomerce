@@ -1,1 +1,1 @@
-web: waitress-serve mac.wsgi:application
+web: gunicorn mac.wsgi:application
