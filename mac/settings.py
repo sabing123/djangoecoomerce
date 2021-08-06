@@ -27,7 +27,7 @@ SECRET_KEY = '8xu^^g*+9gx6(mc2%of46)rq#*t2&_rjv8-tv-nox3x6ka_%dx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['myawesomecartshoping.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['myawesomecartshoping.herokuapp.com','127.0.0.1:8000/shop']
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
