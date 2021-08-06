@@ -76,7 +76,6 @@ sqlparse==0.4.1
 treq==21.5.0
 twilio==6.32.0
 Twisted==21.7.0
-twisted-iocpsupport==1.0.1
 txaio==21.2.1
 txtorcon==20.0.0
 typing-extensions==3.10.0.0
