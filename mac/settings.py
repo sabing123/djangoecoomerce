@@ -29,8 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['myawesomecartshoping.herokuapp.com','127.0.0.1']
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -134,3 +133,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
